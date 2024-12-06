@@ -1,6 +1,6 @@
 from Task import Task
 from Triggers import ConditionTrigger, TimeTrigger, CompletionTrigger
-from TaskManager import TaskManager
+from Kontroller import Kontroller
 
 from time import time, gmtime
 
@@ -13,7 +13,7 @@ def func ():
 
 start_time = time()
 
-taskManager = TaskManager()
+kontroller = Kontroller()
 
 task1 = Task(TimeTrigger(gmtime(time()+1)), func)
 task2 = Task(TimeTrigger(gmtime(time()+2)), func)
@@ -22,11 +22,11 @@ task4 = Task(TimeTrigger(gmtime(time()+4)), func)
 task5 = Task(ConditionTrigger(lambda: x >= 2), lambda: print("X is more than or equal to 2"))
 task6 = Task(CompletionTrigger(task4), lambda: print("end"))
 
-taskManager.addTask(task1)
-taskManager.addTask(task2)
-taskManager.addTask(task3)
-taskManager.addTask(task4)
-taskManager.addTask(task5)
-taskManager.addTask(task6)
+kontroller.addTask(task1)
+kontroller.addTask(task2)
+kontroller.addTask(task3)
+kontroller.addTask(task4)
+kontroller.addTask(task5)
+kontroller.addTask(task6)
 
-taskManager.run()
+kontroller.run()

@@ -1,6 +1,6 @@
 from Triggers import CompletionTrigger
 
-class TaskManager:
+class Kontroller:
       def __init__ (self, tasks=[], triggers=[]):
             self.pending_triggers = triggers
             self.active_triggers = []
