@@ -7,10 +7,10 @@ class Trigger:
             self.createdTime = time()
 
       def should_be_active (self):
-            pass
+            return False
 
       def same (self, other):
-            pass
+            return False
 
 class ConditionTrigger (Trigger):
       def __init__ (self, conditionFunction):
@@ -37,7 +37,7 @@ class CompletionTrigger (Trigger):
             
             return self.assosiatedTask == other.assosiatedTask
 
-class TimeTrigger (Trigger):
+class TimerTrigger (Trigger):
       def __init__ (self, time):
             super().__init__()
             self.time = time
@@ -46,7 +46,7 @@ class TimeTrigger (Trigger):
             return same_time(self.time, gmtime())
       
       def same (self, other):
-            if not isinstance(other, TimeTrigger):
+            if not isinstance(other, TimerTrigger):
                   return False
             
             return same_time(self.time, other.time)
