@@ -6,7 +6,7 @@ with open("README.md", 'r') as file:
 setup(
   name = 'TasKKontrol',
   packages = ['TasKKontrol'],
-  version = '0.1',
+  version = '0.1.0-alpha',
   license='MIT',
   description = 'Task automation library',
   long_description_content_type = "text/markdown",
@@ -17,7 +17,6 @@ setup(
   keywords = ['Workflow', 'Automation', 'Task'],
   install_requires=[],
   classifiers=[
-    'Development Status :: 3 - Alpha',
     'Intended Audience :: Developers',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3',
