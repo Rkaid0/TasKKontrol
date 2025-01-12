@@ -47,7 +47,7 @@ from time import time, gmtime
 
 start_time = time()
 
-delay_trigger = TimerTrigger(gmtime(start_time + 10)) # 10 second delay
+delay_trigger = TimerTrigger(gmtime(start_time + 10)) #10 second delay
 ```
 
 ## Tasks
