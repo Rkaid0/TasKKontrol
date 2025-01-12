@@ -1,6 +1,5 @@
-# Project description
 <div align="center">
-  <img src="images/TasKKontrol_outline_small.png" alt="TasKKontrol Logo" width="400">
+  <img src="https://github.com/Rkaid0/TasKKontrol/raw/main/images/TasKKontrol_outline_small.png" alt="TasKKontrol Logo" width="400">
 </div>
 
 TasKKontrol is a package for automating tasks.
@@ -70,7 +69,7 @@ my_task = Task(ConditionTrigger(is_large), do_work)
 
 ## Kontroller
 ### `Kontroller` Object:
-All tasks need to be added to a `Kontroller` instance using the `addTask` member function. To begin the execution of tasks the `Kontroller` instance needs to be started either with the `start()` or `launch()` member functions. Using the `start()` function is recomended as it initiates the `Kontroller` on a seperate thread allowing for concurrent execution.
+All tasks need to be added to a `Kontroller` instance using the `addTask()` member function. To begin the execution of tasks the `Kontroller` instance needs to be started either with the `start()` or `launch()` member functions. Using the `start()` function is recomended as it initiates the `Kontroller` on a seperate thread allowing for concurrent execution.
 Example usage:
 ```python
 from TasKKontrol.Task import Task
