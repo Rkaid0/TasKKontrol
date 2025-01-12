@@ -1,8 +1,8 @@
 from threading import Thread, Lock
 from time import sleep
 
-from Triggers import CompletionTrigger
-from Task import Status
+from TasKKontrol.Triggers import CompletionTrigger
+from TasKKontrol.Task import Status
 
 class Kontroller:
       def __init__ (self, tasks=[], triggers=[]):

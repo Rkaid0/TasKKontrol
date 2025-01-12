@@ -1,6 +1,6 @@
 from time import time, gmtime, struct_time
 
-from Utils import same_time
+from TasKKontrol.Utils import same_time
 
 class Trigger:
       def __init__ (self):
