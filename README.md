@@ -41,7 +41,7 @@ second_task = Task(CompletionTrigger(first_task), do_work)
 ```
 
 ### `TimerTrigger` Object:
-Defined using another `Task` object, trigger activates when the task is finished executing.
+Defined using a `gmtime` object, trigger will activate at the time of the object.
 Example usage:
 ```python
 from time import time, gmtime
