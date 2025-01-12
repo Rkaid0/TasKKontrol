@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/Rkaid0/TasKKontrol/raw/main/images/TasKKontrol_outline_small.png" alt="TasKKontrol Logo" width="400">
+  <img src="https://raw.githubusercontent.com/Rkaid0/TasKKontrol/main/images/TasKKontrol_outline_small.png" alt="TasKKontrol Logo" width="400">
 </div>
 
 TasKKontrol is a package for automating tasks.
