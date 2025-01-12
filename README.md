@@ -51,4 +51,65 @@ start_time = time()
 delay_trigger = TimerTrigger(gmtime(start_time + 10)) # 10 second delay
 ```
 
+## Tasks
+### `Task` Object:
+Constructor takes a `Trigger` object and a target function which will be executed when the trigger activates.
+Example usage:
+```python
+value = 10
+
+def is_large ():
+      global value
+      return True if value > 5 else False
+
+def do_work ():
+      print("Working")
+
+my_task = Task(ConditionTrigger(is_large), do_work)
+```
+
+## Kontroller
+### `Kontroller` Object:
+All tasks need to be added to a `Kontroller` instance using the `addTask` member function. To begin the execution of tasks the `Kontroller` instance needs to be started either with the `start()` or `launch()` member functions. Using the `start()` function is recomended as it initiates the `Kontroller` on a seperate thread allowing for concurrent execution.
+Example usage:
+```python
+from TasKKontrol.Task import Task
+from TasKKontrol.Triggers import ConditionTrigger, CompletionTrigger
+from TasKKontrol.Kontroller import Kontroller
+
+def true ():
+      return True
+
+def print1 ():
+      print("1")
+
+def print2 ():
+      print("2")
+
+def print3 ():
+      print("3")
+
+# instantiate Kontroller
+kontroller = Kontroller()
+
+# create tasks
+task1 = Task(ConditionTrigger(true), print1)
+task2 = Task(CompletionTrigger(task1), print2)
+task3 = Task(CompletionTrigger(task2), print3)
+
+# add tasks
+kontroller.addTask(task1)
+kontroller.addTask(task2)
+kontroller.addTask(task3)
+
+# start the kontroller
+kontroller.start()
+
+# start() function is nonblocking
+print("Work in parallel with kontroller")
+
+# wait for kontroller to finish
+kontroller.wait_finish()
+```
+
 Created and maintained by Artyom Yesayan
